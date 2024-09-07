@@ -657,6 +657,14 @@ footer .copyright{
 #page-header.about-header{
     background-image: url(img/about/banner.png);
 }
+#page-header h2{
+    font-size: 50px;
+}
+
+#page-header p{
+    font-size: 30px;
+}
+
 
 #about-head{
     display: flex;
@@ -684,6 +692,209 @@ footer .copyright{
 #about-head div{
     padding-left: 40px;
 }
+
+#form-details {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-details form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-details span {
+    font-size: 12px;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+#form-details h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#form-details input, 
+#form-details textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#form-details input:focus, 
+#form-details textarea:focus {
+    outline: none;
+    border-color: #088178;
+    box-shadow: 0 0 5px rgba(8, 129, 120, 0.5);
+}
+
+#form-details button {
+    padding: 15px 40px;
+    background-color: #088178;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+#form-details button:hover {
+    background-color: #065f57;
+}
+
+#contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 0;
+    background-color: #f1f1f1;
+}
+
+#contact-details .details {
+    width: 45%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#contact-details .details h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#contact-details .details h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+#contact-details .details p {
+    font-size: 16px;
+    color: #666;
+}
+
+#contact-details .details li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#contact-details .details li i {
+    font-size: 20px;
+    color: #088178;
+    margin-right: 15px;
+}
+
+#contact-details .map {
+    width: 50%;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#contact-details .map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+#form-details {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 0 auto; /* Center form */
+    border: 1px solid #ddd; /* Light border for a clean look */
+}
+
+#form-details form {
+    width: 100%; /* Make form take up full width */
+}
+
+#form-details input, #form-details textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+    font-size: 16px;
+    background-color: #fff;
+    transition: border 0.3s ease; /* Smooth border transition */
+}
+
+#form-details input:focus, #form-details textarea:focus {
+    border-color: #088178; /* Highlight input on focus */
+    box-shadow: 0 0 6px rgba(8, 129, 120, 0.2); /* Subtle glow on focus */
+    outline: none;
+}
+
+#form-details textarea {
+    resize: none; /* Prevent resizing */
+    height: 150px;
+}
+
+#form-details button {
+    background-color: #088178;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form-details button:hover {
+    background-color: #066658;
+}
+
+#form-details h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+#form-details span {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #777;
+}
+
+
+
 @media (max-width:799px) {
     .section-p1 {
         padding: 40px 40px;
@@ -871,6 +1082,62 @@ footer .copyright{
     }
     #about-app .video{
         width: 100%;
+    }
+    #form-details {
+        padding: 10px;
+    }
+
+    #form-details form {
+        width: 100%;
+        padding: 0;
+    }
+
+    #form-details input, 
+    #form-details textarea {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    #form-details h2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    #form-details button {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+
+    #contact-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact-details .details {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    #contact-details .details h2 {
+        font-size: 20px;
+    }
+
+    #contact-details .details h3 {
+        font-size: 16px;
+    }
+
+    #contact-details .details p {
+        font-size: 14px;
+    }
+
+    #contact-details .map {
+        width: 100%;
+        height: 300px;
+    }
+
+    #contact-details .map iframe {
+        height: 100%;
     }
 }
 
