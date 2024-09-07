@@ -654,6 +654,36 @@ footer .copyright{
     z-index: -9;
 }
 
+#page-header.about-header{
+    background-image: url(img/about/banner.png);
+}
+
+#about-head{
+    display: flex;
+    align-items: center;
+}
+#about-head img{
+    width: 50%;
+    height: auto;
+}
+#about-app{
+    text-align: center;
+}
+#about-app .video {
+    width: 100%;
+    max-width: 80%; /* Adjusts to leave white space on both sides */
+    margin: 0 auto; /* Centers the video */
+    margin-top: 30px;
+}
+
+#about-app .video video {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+#about-head div{
+    padding-left: 40px;
+}
 @media (max-width:799px) {
     .section-p1 {
         padding: 40px 40px;
@@ -826,6 +856,20 @@ footer .copyright{
         margin-right: 0%;
     }
     #prodetails .single-pro-details{
+        width: 100%;
+    }
+    
+    #about-head{
+        flex-direction: column;
+    }
+    #about-head img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #about-head div{
+        padding-left: 40px;
+    }
+    #about-app .video{
         width: 100%;
     }
 }
