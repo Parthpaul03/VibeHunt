@@ -572,6 +572,88 @@ footer .copyright{
 #prodetails .single-pro-details span{
     line-height: 25px;
 }
+#page-header.blog-header{
+    background-image: url(img/banner/b19.jpg);
+}
+
+#blog {
+    padding: 50px 150px; /* Adjust padding for overall space */
+    display: flex;
+    flex-direction: column; /* Stack blog items vertically */
+    gap: 30px; /* Space between each blog box */
+}
+
+#blog .blog-box {
+    width: 100%; /* Make each blog box take full width */
+    display: flex;
+    flex-direction: row; /* Align image and text side by side */
+    background-color: #f9f9f9; /* Light background for blog box */
+    padding: 20px; /* Add padding inside each blog box */
+    border-radius: 10px; /* Slightly rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Add subtle shadow for depth */
+    align-items: center; /* Align image and content vertically */
+}
+#blog .blog-img {
+    width: 30%; /* Image takes 30% of the box */
+    margin-right: 20px; /* Spacing between image and text */
+}
+#blog img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Round image corners to match blog box */
+    object-fit: cover;
+}
+#blog .blog-details {
+    width: 70%; /* Text takes 70% of the box */
+}
+
+#blog .blog-details a {
+    font-size: 14px;
+    color: #088178;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+#blog .blog-details a::after{
+    content: "";
+    width: 50px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 4px;
+    right: -60px;
+}
+#blog .blog-details h4 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #333; /* Darker text color for readability */
+}
+
+
+#blog .blog-details a:hover {
+    color: #055e59; /* Darker hover effect for the link */
+}
+#blog .blog-details p {
+    font-size: 16px;
+    color: #666; /* Subtle text color for body */
+    margin-bottom: 10px;
+}
+#blog .blog-details a:hover:after{
+    background-color: #088178;
+}
+#blog .blog-box h1{
+    position: absolute;
+    top: -60px;
+    left: 0;
+    font-size: 70px;
+    font-weight: 700;
+    color: #c9cbce; 
+    z-index: -9;
+}
+
 @media (max-width:799px) {
     .section-p1 {
         padding: 40px 40px;
