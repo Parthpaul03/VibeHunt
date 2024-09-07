@@ -769,7 +769,8 @@ footer .copyright{
 #contact-details {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px;
     padding: 50px 0;
     background-color: #f1f1f1;
 }
@@ -862,7 +863,7 @@ footer .copyright{
 
 #form-details textarea {
     resize: none; /* Prevent resizing */
-    height: 150px;
+    height: 180px;
 }
 
 #form-details button {
