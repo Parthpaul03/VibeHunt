@@ -8,14 +8,78 @@
     <title>Ecommerce Website</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
     <link rel="stylesheet" href="style.css">
+    <style>
+        .star {
+            font-size: 30px; /* Increased star size */
+            color: grey;
+            cursor: pointer;
+        }
+
+        .star.selected {
+            color: gold;
+        }
+
+        .review-section {
+            margin-top: 5px;
+        }
+
+        .review-container {
+            display: flex; /* Align elements in a row */
+            align-items: center; /* Center vertically */
+        }
+
+        .review-container label {
+            font-size: 18px; /* Increase the font size */
+            font-weight: bold; /* Make the text bold */
+        }
+
+        textarea {
+            width: 70%;
+            height: 70px; /* Increased height */
+            resize: none;
+            padding: 10px; /* Reduced padding */
+            border: 1.5px solid #ccc;
+            border-radius: 5px;
+            margin-right: 10px; /* Space between textarea and button */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center align text */
+        }
+
+        button {
+            padding: 5px 10px; /* Reduced padding for buttons */
+            font-size: 12px; /* Smaller font size for buttons */
+        }
+
+        .star-rating {
+            margin-bottom: 10px; /* Space after rating stars */
+        }
+
+        .audio-video-review-container {
+            margin-top: 10px; /* Reduced margin */
+            text-align: center; /* Center the text */
+            display: flex; /* Flex layout for buttons */
+            justify-content: center; /* Center the buttons */
+        }
+
+        .audio-video-review-container h6 {
+            margin-right: 5px; /* Reduced space between heading and buttons */
+            align-self: center; /* Align heading vertically */
+            font-size: 8px; /* Match font size of product size dropdown */
+        }
+
+        .audio-video-review-container button {
+            margin: 0 5px; /* Reduced space between the buttons */
+            width: 70%;
+            height: 70px; /* Increased height */
+        }
+    </style>
 </head>
+
 <body>
     <section id="header">
         <a href="#">
             <img src="/img/Logo.png" class="logo" alt="Logo">
         </a>
-        
-
         <div>
             <ul id="navbar">
                 <li><a href="index.html">Home</a></li>
@@ -29,11 +93,10 @@
         </div>
         <div id="mobile">
             <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
-            <i id="bar" class="fas fa-outdent">
-
-            </i>
+            <i id="bar" class="fas fa-outdent"></i>
         </div>
     </section>
+
     <section id="prodetails" class="section-p1">
         <div class="single-pro-image">
             <img src="img/Products/f1.jpg" width="100%" id="MainImg" alt="">
@@ -55,7 +118,7 @@
         <div class="single-pro-details">
             <h6>Home/T-shirt</h6>
             <h4>Men's Fashion T-shirt</h4>
-            <h2>₹ 6999<h2>
+            <h2>₹ 6999</h2>
             <select>
                 <option>Select Size</option>
                 <option>XL</option>
@@ -66,9 +129,34 @@
             <input type="number" value="1">
             <button class="normal">Add To Cart</button>
             <h4>Product Details</h4>
-            <span>This minimalist tee is an everyday staple you'll grab again and again. Soft cotton single jersey feels smooth every time you pull it on, and an embroidered Trefoil logo subtly signals your adidas allegiance. The regular fit finds that sweet spot between not too tight and not too loose, making it the perfect companion for any casual outfit in your rotation.The cotton in this product has been sourced through Better Cotton. Better Cotton is sourced via a chain of custody model called mass balance.</span>
+            <span>This minimalist tee is an everyday staple you'll grab again and again. Soft cotton single jersey feels smooth every time you pull it on, and an embroidered Trefoil logo subtly signals your adidas allegiance. The regular fit finds that sweet spot between not too tight and not too loose, making it the perfect companion for any casual outfit in your rotation. </span>
+
+            <!-- Review Section -->
+            <div class="review-section">
+                <h4>Ratings & Reviews</h4>
+                <div class="star-rating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <div class="review-container">
+                    <label for="review">Product Review:</label>
+                    <textarea id="review" name="review" required placeholder="Write your review here..."></textarea>
+                    <button type="button" class="normal" id="submit-review">Submit Review</button>
+                </div>
+                
+                <!-- Audio & Video Review Section -->
+                <div class="audio-video-review-container">
+                    <h6>Leave an Audio or Video Review</h6>
+                    <button class="normal" onclick="window.location.href='audio_review.html'">Record Audio</button>
+                    <button class="normal" onclick="window.location.href='video_review.html'">Record Video</button>
+                </div>
+            </div>
         </div>
     </section>
+
     <section id="product1" class="section-p1">
         <h2>Featured Products</h2>
         <p>Summer Collection New Modern Design</p>
@@ -137,31 +225,27 @@
                 </div>
                 <a href="#"><i class="fas fa-shopping-cart cart"></i></a>
             </div>
-            
-            
         </div>
     </section>
-    
-   
+
     <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">
             <h4>Sign Up For News Letter</h4>
             <p> Get E-mail updates about our latest shop and <span>special offers.</span></p>
         </div>
-        <div class="form" >
+        <div class="form">
             <input type="text" placeholder="Your email address">
-            <button class="normal">Sign Up</button> 
+            <button class="normal">Sign Up</button>
         </div>
     </section>
 
     <footer class="section-p1">
         <div class="col">
-           <img class="logo" src="img/Logo.png"alt="">
+            <img class="logo" src="img/Logo.png" alt="">
             <h4>Contact</h4>
             <p> <strong>Address:</strong> ENERGY ACRES, UPES, BIDHOLI, via, Prem Nagar, Uttarakhand 248007</p>
             <p> <strong>Phone:</strong> +01 2222 378 / +91 9910024947</p>
             <p> <strong>Hours:</strong> 10:00 - 18:00 , Mon- Sat</p>
-            
         </div>
         <div class="col">
             <h4>About</h4>
@@ -170,7 +254,6 @@
             <a href="#">Privacy Policy</a>
             <a href="#">Terms & Conditions</a>
             <a href="#">Contact Us</a>
-
         </div>
         <div class="col">
             <h4>My Account</h4>
@@ -179,7 +262,6 @@
             <a href="#">My Wishlist</a>
             <a href="#">Track My Order</a>
             <a href="#">Help</a>
-
         </div>
         <div class="col install">
             <h4>Install App</h4>
@@ -196,25 +278,54 @@
             <p>© 2024, Vibe Hunt E-Commerce Website</p>
         </div>
     </footer>
-    <script>
-        var MainImg= document.getElementById("MainImg");
-        var smallimg =document.getElementsByClassName("small-img")
 
-        smallimg[0].onclick = function(){
+    <script>
+        var MainImg = document.getElementById("MainImg");
+        var smallimg = document.getElementsByClassName("small-img");
+
+        smallimg[0].onclick = function () {
             MainImg.src = smallimg[0].src;
         }
-        smallimg[1].onclick = function(){
+        smallimg[1].onclick = function () {
             MainImg.src = smallimg[1].src;
         }
-        smallimg[2].onclick = function(){
+        smallimg[2].onclick = function () {
             MainImg.src = smallimg[2].src;
         }
-        smallimg[3].onclick = function(){
+        smallimg[3].onclick = function () {
             MainImg.src = smallimg[3].src;
         }
+
+        // Star Rating Functionality
+        const stars = document.querySelectorAll('.star');
+        let selectedRating = 0;
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                selectedRating = star.getAttribute('data-value');
+                stars.forEach(s => {
+                    s.classList.remove('selected');
+                });
+                for (let i = 0; i < selectedRating; i++) {
+                    stars[i].classList.add('selected');
+                }
+            });
+        });
+
+        // Submit Review Functionality
+        document.getElementById('submit-review').addEventListener('click', () => {
+            const reviewText = document.getElementById('review').value;
+            if (selectedRating === 0 || reviewText.trim() === "") {
+                alert("Please select a rating and write a review.");
+            } else {
+                alert(`Thank you for your review!\nRating: ${selectedRating} star(s)\nReview: ${reviewText}`);
+                // Reset the form
+                stars.forEach(s => s.classList.remove('selected'));
+                selectedRating = 0;
+                document.getElementById('review').value = "";
+            }
+        });
     </script>
     <script src="script.js"></script>
 </body>
 
 </html>
- 
