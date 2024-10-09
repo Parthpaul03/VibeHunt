@@ -37,31 +37,31 @@
             flex-direction: column;
             align-items: center;
             margin: 20px;
-            flex: 1; /* Take available space */
-            position: relative; /* Make this position relative for absolute child */
+            flex: 1;
+            position: relative;
         }
 
         video {
-            width: 70%; /* Increased width for the camera */
-            height: 400px; /* Set a fixed height for the camera */
+            width: 70%;
+            height: 400px;
             border: 1px solid #ccc;
             border-radius: 10px;
             margin-bottom: 20px;
-            display: none; /* Initially hidden */
+            display: none;
         }
 
         #preview {
-            width: 70%; /* Same width as the camera */
-            height: 400px; /* Set a fixed height for the preview */
-            display: none; /* Hidden by default */
+            width: 70%;
+            height: 400px;
+            display: none;
         }
 
         .controls {
             display: flex;
             justify-content: space-between;
-            width: 80%; /* Width of the button container */
-            position: absolute; /* Positioning the controls at the bottom */
-            bottom: 20px; /* Distance from the bottom */
+            width: 80%;
+            position: absolute;
+            bottom: 20px;
         }
 
         button {
@@ -95,17 +95,19 @@
         }
 
         .message {
-            position: absolute; /* Absolute positioning */
-            top: 50%; /* Center vertically */
-            left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%); /* Adjust to truly center */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             font-size: 24px;
             color: #333;
             text-align: center;
-            display: block; /* Initially shown */
-            z-index: 10; /* Above other elements */
+            display: block;
+            z-index: 10;
         }
     </style>
+    <script async defer src="https://apis.google.com/js/api.js" onload="handleClientLoad()"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 
 <body>
@@ -135,101 +137,7 @@
         <p>© 2024, E-commerce Website</p>
     </footer>
 
-    <script>
-        const video = document.getElementById('video');
-        const preview = document.getElementById('preview');
-        const message = document.getElementById('message');
-        const startRecordingButton = document.getElementById('start-recording');
-        const stopRecordingButton = document.getElementById('stop-recording');
-        const uploadButton = document.getElementById('upload');
-        const retakeButton = document.getElementById('retake');
-
-        let mediaRecorder;
-        let recordedChunks = [];
-        let stream;
-
-        // Access the camera and microphone
-        function startCamera() {
-            return navigator.mediaDevices.getUserMedia({ video: true, audio: true })
-                .then(mediaStream => {
-                    stream = mediaStream;
-                    video.srcObject = stream;
-                    video.style.display = 'block'; // Show the live video
-                    message.style.display = 'none'; // Hide the message when the camera starts
-                })
-                .catch(error => {
-                    console.error('Error accessing camera and microphone: ', error);
-                });
-        }
-
-        function stopCamera() {
-            if (stream) {
-                stream.getTracks().forEach(track => track.stop());
-                video.srcObject = null; // Clear the video source
-                video.style.display = 'none'; // Hide the live video
-            }
-        }
-
-        startRecordingButton.onclick = () => {
-            recordedChunks = [];
-            startCamera().then(() => {
-                mediaRecorder = new MediaRecorder(stream);
-
-                mediaRecorder.ondataavailable = event => {
-                    if (event.data.size > 0) {
-                        recordedChunks.push(event.data);
-                    }
-                };
-
-                mediaRecorder.onstop = () => {
-                    const blob = new Blob(recordedChunks, { type: 'video/webm' });
-                    const url = URL.createObjectURL(blob);
-                    preview.src = url;
-                    preview.style.display = 'block'; // Show the preview
-                    uploadButton.disabled = false;
-
-                    // Stop the stream and hide the camera
-                    stopCamera();
-                };
-
-                mediaRecorder.start();
-                startRecordingButton.disabled = true;
-                stopRecordingButton.disabled = false;
-                retakeButton.disabled = true;
-
-                // Hide the message when recording starts
-                message.style.display = 'none';
-            });
-        };
-
-        stopRecordingButton.onclick = () => {
-            mediaRecorder.stop();
-            startRecordingButton.disabled = true;
-            stopRecordingButton.disabled = true;
-            retakeButton.disabled = false;
-        };
-
-        retakeButton.onclick = () => {
-            recordedChunks = [];
-            preview.style.display = 'none'; // Hide the preview
-            uploadButton.disabled = true;
-            retakeButton.disabled = true;
-            startRecordingButton.disabled = false;
-
-            // Restart the camera and microphone stream
-            startCamera();
-        };
-
-        uploadButton.onclick = () => {
-            // Upload functionality here
-            console.log('Upload functionality to be implemented.');
-        };
-
-        // Display the message on page load
-        window.onload = () => {
-            message.style.display = 'block'; // Show the message
-        };
-    </script>
+    <script src="review.js"></script>
 </body>
 
 </html>

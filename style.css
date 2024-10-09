@@ -89,13 +89,13 @@ html, body {
     align-items: flex-start;
     justify-content: center;
 }
-#hero h4{
+#hero h3{
     padding-bottom: 15px;
-    font-size: 35px;
+    font-size: 45px;
 }
 #hero h1{
     color: #088178;
-    font-size: 50px;
+    font-size: 55px;
 }
 #hero button{
     background-image: url(img/button.png);
@@ -1254,6 +1254,7 @@ footer .copyright{
     #contact-details .map iframe {
         height: 100%;
     }
+
 }
 
 
