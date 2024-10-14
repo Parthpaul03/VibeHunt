@@ -294,7 +294,7 @@ button.normal{
     justify-content: center;
     align-items: self-start;
     background-image:url("img/banner/b17.jpg") ;
-    min-width: 600px;
+    min-width: 560px;
     height: 60vh;
     background-color: cover;
     background-position: center;
@@ -306,7 +306,7 @@ button.normal{
     justify-content: center;
     align-items: self-start;
     background-image:url("img/banner/b10.jpg") ;
-    min-width: 600px;
+    min-width: 560px;
     height: 60vh;
     background-color: cover;
     background-position: center;
